@@ -12,7 +12,7 @@ function removeTamu(index) {
   displayTamu();
 }
 
-function addTamu(index, todo) {
+function addTamu(index, Tamu) {
   const tr = document.createElement("tr");
   const tdButton = document.createElement("td");
   tr.appendChild(tdButton);
@@ -25,9 +25,9 @@ function addTamu(index, todo) {
   };
   tdButton.appendChild(buttonDone);
 
-  const tdTodo = document.createElement("td");
-  tdTodo.textContent = todo;
-  tr.appendChild(tdTodo);
+  const tdTamu = document.createElement("td");
+  tdTamu.textContent = Tamu;
+  tr.appendChild(tdTamu);
 
   const TamuBody = document.getElementById("TamuBody");
   TamuBody.appendChild(tr);
@@ -37,23 +37,23 @@ function displayTamu() {
   clearTamu();
 
   for (let i = 0; i < Tamu.length; i++) {
-    const todo = Tamu[i];
+    const Tamu = Tamu[i];
 
     const searchText = document.getElementById("search").value.toLowerCase();
 
-    if (todo.toLowerCase().includes(searchText)) {
-      addTamu(i, todo);
+    if (Tamu.toLowerCase().includes(searchText)) {
+      addTamu(i, Tamu);
     }
   }
 }
 
-document.forms["todoForm"].onsubmit = function (event) {
+document.forms["TamuForm"].onsubmit = function (event) {
   event.preventDefault();
 
-  const todo = document.forms["todoForm"]["todo"].value;
-  Tamu.push(todo);
+  const Tamu = document.forms["TamuForm"]["Tamu"].value;
+  Tamu.push(Tamu);
 
-  document.forms["todoForm"].reset();
+  document.forms["TamuForm"].reset();
 
   console.info(Tamu);
   displayTamu();
