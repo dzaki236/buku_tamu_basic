@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buku Kehadiran Tamu</title>
+    <style>
+    #todo{
+      padding: 1em 6em 1em 6em;
+    }
+    *{
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .btn{
+      padding: 1em 3em 1em 3em;
+      background-color: orange;
+      border: none;
+    }
+    </style>
+</head>
+<body>
+<h2>Aplikasi Untuk List Nama Tamu</h2>
+
+<form name="todoForm">
+  <table>
+    <tbody>
+    <tr>
+      <td><label for="todo">Nama Tamu :</label></td>
+      <td><input type="text" id="todo" name="todo" required placeholder="Masukkan Nama Tamu"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><input class="btn" type="submit" value="[+] Tambah Tamu"/></td>
+    </tr>
+    </tbody>
+  </table>
+</form>
+
+<h3>Nama Tamu</h3>
+
+<table>
+  <thead>
+  <tr>
+    <th style="font-size: 12px;">Filter:</th>
+    <th><input type="text" name="search" id="search"></th>
+  </tr>
+  </thead>
+  <tbody id="TamuBody">
+  <tr>
+    <td><input class="btn" type="button" value="Keluar" required></td>
+    <td></td>
+  </tr>
+  </tbody>
+</table>
+
+<script src="script.js">
+
+</script>
+
+</body>
+</html>
